@@ -2,8 +2,9 @@
 .page-content {
   text-align: center; /* 标题居中 */
   font-weight: bold; /* 标题字体加粗 */
-  padding-top: 60px; /* 针对iPhone X及以上型号，避免摄像头遮挡 */
-  padding-bottom: 12px; /* 标题下方留出一些空间 */
+  padding-top: 45px; /* 针对iPhone X及以上型号，避免摄像头遮挡 */
+  padding-bottom: 20px; /* 标题下方留出一些空间 */
+  font-size: 24px;
 }
 
 /* 设备列表样式调整为网格布局，以每行展示两个项目 */

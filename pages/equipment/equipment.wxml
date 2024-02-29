@@ -1,4 +1,4 @@
-<scroll-view scroll-y="true" style="height: 100%;">
+<scroll-view scroll-y="true" type="list" style="height: 100%;">
   <!-- 标题 -->
   <view class="page-content">
     <view class="title">设备列表</view>
