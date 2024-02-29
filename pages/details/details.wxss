@@ -1,0 +1,40 @@
+/* 设备详情容器样式 */
+.detail-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  padding-top: calc(40px + env(safe-area-inset-top)); /* 为灵动岛留出空间 */
+}
+
+/* 设备名称样式 */
+.detail-header .device-name {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10px; /* 确保距离顶部有一定间距 */
+}
+
+/* 设备图片样式 */
+.detail-body .equipment-image {
+  width: 65vw; /* 根据实际情况调整 */
+  height: 60vw;
+  margin: 20px auto; /* 上下间距20px，左右自动居中 */
+}
+
+/* 型号和介绍样式 */
+.detail-item {
+  width: 100%; /* 占满容器宽度 */
+  margin-bottom: 15px; /* 每项之间的间距 */
+}
+
+.item-title, .item-content {
+  display: block; /* 使内容跨行展示 */
+  text-align: left; /* 左对齐文本 */
+  margin: 5px 0; /* 上下间距 */
+}
+
+/* 型号和介绍标题加粗 */
+.item-title {
+  font-weight: bold;
+}

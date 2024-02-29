@@ -1,0 +1,69 @@
+/* 页面基础样式 */
+.page-content {
+  text-align: center; /* 标题居中 */
+  font-weight: bold; /* 标题字体加粗 */
+  padding-top: 60px; /* 针对iPhone X及以上型号，避免摄像头遮挡 */
+  padding-bottom: 12px; /* 标题下方留出一些空间 */
+}
+
+/* 设备列表样式调整为网格布局，以每行展示两个项目 */
+.equipment-list {
+  display: flex;
+  flex-wrap: wrap; /* 允许内容换行 */
+  justify-content: space-around; /* 在每一行中项目之间平均分配空间 */
+  padding: 0 16px; /* 左右留出一些边距 */
+}
+
+.equipment-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 确保设备名称和预约按钮在设备项内居中 */
+  width: 40vw; /* 每个项目占据行宽的大约一半，适用于大屏幕 */
+  height: 55vw;
+  margin-bottom: 20px; /* 设备项之间留出间距 */
+}
+
+.equipment-swiper {
+  width: 100%; /* 轮播图宽度占满容器 */
+  height: 200px; /* 轮播图高度 */
+  border-radius: 8px; /* 轮播图圆角 */
+  overflow: hidden; /* 超出部分隐藏 */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* 添加阴影效果 */
+}
+
+.equipment-image {
+  width: 100%; /* 图片宽度占满容器 */
+  height: 100%; /* 图片高度占满容器 */
+}
+
+.equipment-name {
+  text-align: center; /* 文本和按钮文字居中 */
+  width: auto; /* 默认宽度设置为自动，根据内容调整 */
+  max-width: 90%; /* 设置最大宽度防止按钮过宽 */
+}
+
+.book-button {
+  text-align: center; /* 文本和按钮文字居中 */
+  width: auto; /* 默认宽度设置为自动，根据内容调整 */
+  max-width: 85%; /* 设置最大宽度防止按钮过宽 */
+  background-color: #007aff; /* 预约按钮背景颜色 */
+  color: white; /* 文字颜色 */
+}
+
+/* 适配小屏幕：调整预约按钮的宽度 */
+@media screen and (max-width: 375px) {
+  .book-button {
+    width: 40vw; /* 在小屏幕上，将按钮宽度设置为占父容器的80% */
+    margin: 10px 0; /* 为按钮上下添加一些外边距 */
+  }
+
+  .equipment-item {
+    width: 40vw; /* 在小屏幕上，每个设备项占满整行以避免重叠 */
+  }
+}
+
+@media screen and (min-width: 376px) {
+  .equipment-swiper {
+    height: 220px; /* 大屏幕设备轮播图高度调整 */
+  }
+}

@@ -1,0 +1,22 @@
+<!--pages/details.wxml-->
+<view class="detail-container">
+  <view class="detail-header">
+    <text class="device-name">{{equipmentDetails.name}}</text>
+  </view>
+  
+  <view class="detail-body">
+    <view class="detail-item">
+      <image src="{{equipmentDetails.imageUrl}}" class="equipment-image"></image>
+    </view>
+
+    <!-- 循环展示设备的其他属性 -->
+    <block wx:for="{{equipmentDetails.attributes}}" wx:key="key">
+      <view class="detail-item">
+        <text class="item-title">{{item.key}}: </text>
+        <text class="item-content">{{item.value}}</text>
+      </view>
+    </block>
+
+    <!-- 可以根据需要添加更多的设备信息 -->
+  </view>
+</view>

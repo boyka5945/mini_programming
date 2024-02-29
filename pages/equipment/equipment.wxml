@@ -1,0 +1,22 @@
+<scroll-view scroll-y="true" style="height: 100%;">
+  <!-- 标题 -->
+  <view class="page-content">
+    <view class="title">设备列表</view>
+  </view>
+  <view class="equipment-list">
+    <block wx:for="{{equipmentList}}" wx:key="unique">
+      <view class="equipment-item">
+        <!-- Swiper组件展示设备图片 -->
+        <swiper class="equipment-swiper">
+            <swiper-item>
+              <image src="{{item.imageUrl}}" class="equipment-image"></image>
+            </swiper-item>
+        </swiper>
+        <!-- 设备名称 -->
+        <text class="equipment-name">{{item.name}}</text>
+        <!-- 预约按钮 -->
+        <button class="book-button" bindtap="viewDetails" data-id="{{item.id}}">预约</button>
+      </view>
+    </block>
+  </view>
+</scroll-view>
